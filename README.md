@@ -1,3 +1,11 @@
+<p align="center">
+  <img src="assets/logo.png" alt="LighTTice" width="500">
+</p>
+
+<p align="center">
+  <b>Design, simulation, and analysis of periodic photonic structures</b>
+</p>
+
 # LighTTice
 
 **Design, simulation, and polarization-resolved analysis of periodic photonic structures.**
@@ -25,6 +33,14 @@ GUI-based RCWA simulation application built on `grcwa`. It supports patterned an
 `lighttice_viewer.py`
 
 Interactive post-processing application for LighTTice NPZ results. It reconstructs reflection, transmission, and absorption using the stored complex modal information and supports zeroth/all propagating orders, sample/reference regions, linear and circular polarization channels, custom Jones states, momentum/energy maps and cuts, persistent computed-map caching, configuration save/load, and a NumPy-based custom-expression workspace for combining calculated signals.
+
+## Screenshot
+
+<p align="center">
+  <img src="assets/screenshot.png" alt="LighTTice Solver" width="900">
+</p>
+
+*Screenshot of the **LighTTice Solver**, showing the simulation setup, periodic-structure geometry, RCWA calculation controls, and polarization-resolved reflectance results.*
 
 ## Installation
 

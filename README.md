@@ -1,30 +1,30 @@
-# LightTTice
+# lighTTice
 
 **Design, simulation, and polarization-resolved analysis of periodic photonic structures.**
 
-LightTTice is a Python-based research toolkit for modelling gratings, photonic crystals, metasurfaces, and other periodic optical structures. It combines three standalone desktop applications into one workflow: geometry design, electromagnetic simulation, and interactive post-processing.
+lighTTice is a Python-based research toolkit for modelling gratings, photonic crystals, metasurfaces, and other periodic optical structures. It combines three standalone desktop applications into one workflow: geometry design, electromagnetic simulation, and interactive post-processing.
 
 The electromagnetic solver is built around the open-source [`grcwa`](https://grcwa.readthedocs.io/en/latest/#) Rigorous Coupled-Wave Analysis library and adds a graphical workflow for structure definition, material handling, parameter sweeps, parallelized calculations, data export, and polarization-resolved analysis.
 
 ## Applications
 
-### LightTTice Designer
+### lighTTice Designer
 
-`lightttice_designer.py`
+`lighttice_designer.py`
 
 Interactive unit-cell editor for periodic structures. It supports circles, ellipses, slits/rectangles, positioning and rotation, material/void regions, periodic previews, and rectangular or non-orthogonal lattice vectors. Designs are exported as JSON cell files for direct use by the Solver.
 
-### LightTTice Solver
+### lighTTice Solver
 
-`lightttice_solver.py`
+`lighttice_solver.py`
 
 GUI-based RCWA simulation application built on `grcwa`. It supports patterned and multilayer structures, dispersive material data, sample/reference calculations, linear-polarization solver runs, diffraction orders, complex modal/field outputs for later polarization reconstruction, configuration save/load, progress estimation, and multiprocessing across energy points. Designer cell files can be loaded directly, including oblique/hexagonal lattice definitions.
 
-### LightTTice Viewer
+### lighTTice Viewer
 
-`lightttice_viewer.py`
+`lighttice_viewer.py`
 
-Interactive post-processing application for LightTTice NPZ results. It reconstructs reflection, transmission, and absorption using the stored complex modal information and supports zeroth/all propagating orders, sample/reference regions, linear and circular polarization channels, custom Jones states, momentum/energy maps and cuts, persistent computed-map caching, configuration save/load, and a NumPy-based custom-expression workspace for combining calculated signals.
+Interactive post-processing application for lighTTice NPZ results. It reconstructs reflection, transmission, and absorption using the stored complex modal information and supports zeroth/all propagating orders, sample/reference regions, linear and circular polarization channels, custom Jones states, momentum/energy maps and cuts, persistent computed-map caching, configuration save/load, and a NumPy-based custom-expression workspace for combining calculated signals.
 
 ## Installation
 
@@ -41,16 +41,16 @@ pip install -r requirements.txt
 Launch each application independently:
 
 ```bash
-python lightttice_designer.py
-python lightttice_solver.py
-python lightttice_viewer.py
+python lighttice_designer.py
+python lighttice_solver.py
+python lighttice_viewer.py
 ```
 
 A typical workflow is:
 
-1. Create a periodic unit cell in **LightTTice Designer** and export it as JSON.
-2. Load the cell in **LightTTice Solver**, configure the optical stack and simulation range, and save the calculation as NPZ.
-3. Open the NPZ in **LightTTice Viewer** for polarization-resolved visualization and custom analysis.
+1. Create a periodic unit cell in **lighTTice Designer** and export it as JSON.
+2. Load the cell in **lighTTice Solver**, configure the optical stack and simulation range, and save the calculation as NPZ.
+3. Open the NPZ in **lighTTice Viewer** for polarization-resolved visualization and custom analysis.
 
 ## Main capabilities
 
@@ -72,10 +72,10 @@ A typical workflow is:
 
 ## Notes
 
-LightTTice is research software under active development. Numerical results should be independently validated for the specific geometry, material model, convergence parameters, and observable being studied.
+lighTTice is research software under active development. Numerical results should be independently validated for the specific geometry, material model, convergence parameters, and observable being studied.
 
-The cell JSON format identifier used internally remains compatible with earlier LightTTice/LighTTice development files.
+The cell JSON format identifier used internally remains compatible with earlier lighTTice/lighTTice development files.
 
 ## Acknowledgement
 
-The RCWA numerical backend used by LightTTice is [`grcwa`](https://grcwa.readthedocs.io/en/latest/#), an open-source differentiable RCWA implementation. Please consult the upstream project documentation for its own usage, citation, and licensing information.
+The RCWA numerical backend used by lighTTice is [`grcwa`](https://grcwa.readthedocs.io/en/latest/#), an open-source differentiable RCWA implementation. Please consult the upstream project documentation for its own usage, citation, and licensing information.

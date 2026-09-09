@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-lighTTice Solver — PyQt5/QtAgg RCWA simulation application for periodic photonic structures.
+LighTTice Solver — PyQt5/QtAgg RCWA simulation application for periodic photonic structures.
 
 This version saves complex reflected modal amplitudes b0 and transmitted modal amplitudes aN for robust Jones/circular-polarization postprocessing, in addition to field outputs. It also supports arbitrary homogeneous top layers and full configuration save/load. Each top layer can use:
     - constant refractive index n + i*k
@@ -300,7 +300,7 @@ def make_macrocell_eps(
 
 
 def load_cell_design_json(path):
-    """Load a lighTTice Designer cell JSON file."""
+    """Load a LighTTice Designer cell JSON file."""
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
     if not isinstance(data, dict):
@@ -2031,7 +2031,7 @@ class Worker(QThread):
 class RCWAQtGUI(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle(f"lighTTice Solver v{SOLVER_VERSION} — periodic structures")
+        self.setWindowTitle(f"LighTTice Solver v{SOLVER_VERSION} — periodic structures")
         self.resize(1520, 930)
         self.result = None
         self.worker = None

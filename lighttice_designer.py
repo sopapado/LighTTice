@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-lighTTice Designer v0.3
+LighTTice Designer v0.3
 
 A small cell designer for creating patterned-layer JSON files for the RCWA solver.
-The exported JSON can be loaded directly by lighTTice Solver.
+The exported JSON can be loaded directly by LighTTice Solver.
 
 Coordinate convention:
     - Units: microns
@@ -48,7 +48,7 @@ def fnum(x, default=0.0):
 class CellDesigner(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle(f"lighTTice Designer v{APP_VERSION} — unit-cell editor")
+        self.setWindowTitle(f"LighTTice Designer v{APP_VERSION} — unit-cell editor")
         self.resize(1450, 850)
         self.shapes = []
         self.selected_index = None
@@ -451,7 +451,7 @@ class CellDesigner(QMainWindow):
 
     def to_dict(self):
         return {
-            "format": "lighTTiceCell",
+            "format": "LighTTiceCell",
             "version": 1,
             "units": "um",
             "Lx": self.Lx(),

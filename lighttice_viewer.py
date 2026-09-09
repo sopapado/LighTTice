@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-lighTTice Viewer
+LighTTice Viewer
 
 Circular-polarization viewer using p and s solver runs and saved complex reflected
 modal amplitudes b0.
@@ -291,7 +291,7 @@ class CommentToggleTextEdit(QTextEdit):
 class Viewer(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle(f"lighTTice Viewer v{VIEWER_VERSION} — polarization analysis")
+        self.setWindowTitle(f"LighTTice Viewer v{VIEWER_VERSION} — polarization analysis")
         self.resize(1450, 880)
         self.data = None
         self.path = None
